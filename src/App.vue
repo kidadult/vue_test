@@ -5,7 +5,7 @@
     <mt-header fixed title="黑马程序员·Vue项目"></mt-header>
 
 
-    <!-- 中间的 路由 router-view 区域 -->
+    <!-- 中间的 路由 router-view 区域:匹配到的路由component -->
 		<transition>
 			<router-view></router-view>
 		</transition>
@@ -45,7 +45,7 @@
   padding-top: 40px;
   overflow-x: hidden;
 }
-
+/*设置动画:从右侧进来,从左侧消失.*/
 .v-enter {
   opacity: 0;
   transform: translateX(100%);
