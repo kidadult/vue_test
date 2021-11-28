@@ -33,6 +33,6 @@ import app from './App.vue'
 
 var vm = new Vue({
   el: '#app',
-  render: c => c(app),
+  render: c => c(app),   // 参数app表示的是App.vue组件模板;把App.vue挂载到#app元素中.
   router // 1.4 挂载路由对象到 VM 实例上
 })

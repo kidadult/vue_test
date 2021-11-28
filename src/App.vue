@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
 
-    <!-- 顶部 Header 区域 -->
+    <!-- 顶部 Header 区域  Mint-ui中的组件 -->
     <mt-header fixed title="黑马程序员·Vue项目"></mt-header>
 
 
@@ -11,7 +11,7 @@
 		</transition>
 
 
-    <!-- 底部 Tabbar 区域 -->
+    <!-- 底部 Tabbar 区域  miu样式 -->
     <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
 				<span class="mui-icon mui-icon-home"></span>
