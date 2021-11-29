@@ -43,6 +43,7 @@
 <style lang="scss" scoped>
 .app-container {
   padding-top: 40px;
+  padding-bottom: 50px;
   overflow-x: hidden;
 }
 /*设置动画:从右侧进来,从左侧消失.*/
