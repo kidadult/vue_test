@@ -2,29 +2,31 @@
   <div>
 
     <!-- 轮播图区域 -->
-    <mt-swipe :auto="4000">
-      <!-- 在组件中，使用v-for循环的话，一定要使用 key -->
+<!--    <mt-swipe :auto="4000">
+      &lt;!&ndash; 在组件中，使用v-for循环的话，一定要使用 key &ndash;&gt;
       <mt-swipe-item><img src="../../images/slideshow1.png" alt=""></mt-swipe-item>
       <mt-swipe-item><img src="../../images/slideshow2.png" alt=""></mt-swipe-item>
       <mt-swipe-item><img src="../../images/slideshow3.png" alt=""></mt-swipe-item>
       
-<!--      <mt-swipe-item v-for="item in lunbotuList" :key="item.url">
+&lt;!&ndash;      <mt-swipe-item v-for="item in lunbotuList" :key="item.url">
         <img :src="item.img" alt="">
-      </mt-swipe-item>-->
-    </mt-swipe>
-
+      </mt-swipe-item>&ndash;&gt;
+    </mt-swipe>-->
+    <swiper :lunbotuList="lunbotuList"></swiper>
 
     <!-- 6宫格 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newsList">
               <img src="../../images/menu1.png" alt="">
               <div class="mui-media-body">新闻资讯</div></router-link></li>
-      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+
+      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photolist">
               <img src="../../images/menu2.png" alt="">
-              <div class="mui-media-body">图片分享</div></a></li>
-      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+              <div class="mui-media-body">图片分享</div></router-link></li>
+
+      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/goodlist">
               <img src="../../images/menu3.png" alt="">
-              <div class="mui-media-body">商品购买</div></a></li>
+              <div class="mui-media-body">商品购买</div></router-link></li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
               <img src="../../images/menu4.png" alt="">
               <div class="mui-media-body">留言反馈</div></a></li>
@@ -50,11 +52,15 @@
 
 <script>
 import { Toast } from "mint-ui";
-
+import swiper from "../subcomment/swiper.vue";
 export default {
   data() {
     return {
-      lunbotuList: [] // 保存轮播图的数组
+      lunbotuList: [
+        {src:"https://picsum.photos/id/1020/300/200"},
+        {src:"https://picsum.photos/id/1004/300/200"},
+        {src:"https://picsum.photos/id/10/300/200"},
+      ] // 保存轮播图的数组
     };
   },
  /* created() {
@@ -74,6 +80,9 @@ export default {
         }
       });
     }
+  },
+  components:{
+    swiper
   }
 };
 </script>
